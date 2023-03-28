@@ -1,5 +1,7 @@
 package com.example.demo.repository;
+
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 import com.example.demo.dto.UserSearchRequest;
 import com.example.demo.entity.User;
@@ -13,5 +15,6 @@ public interface UserMapper {
      * @param user 検索用リクエストデータ
      * @return ユーザー情報
      */
+	@Select("SELECT * FROM user WHERE id = #{id}")
     User search(UserSearchRequest user);
 }

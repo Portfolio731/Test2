@@ -19,7 +19,6 @@ public class UserService {
      */
     @Autowired
     private UserMapper userMapper;
-    @Autowired
     UserRepository userRepository;
     /**
      * ユーザー情報検索
